@@ -38,24 +38,6 @@ public class Arena extends JPanel{
             b.draw(g);
             b.move();
             b.bounce(this);
-//            if (b.getX() > 400 - b.getSize()){
-//                //System.out.println("bounce");
-//                b.setXSpeed(-1 * b.getXSpeed());
-//            }
-//            if (b.getX() < 0){
-//                b.setXSpeed(-1 * b.getXSpeed());
-//            }
-//            if (b.getY() > this.getSize().getWidth() - b.getSize()){
-//                //System.out.println("bounce");
-//                b.setYSpeed(-1 * b.getYSpeed());
-//            }
-//            if (b.getY() > this.getSize().getHeight() - b.getSize()){
-//                //System.out.println("bounce");
-//                b.setYSpeed(-1 * b.getYSpeed());
-//            }
-//            if (b.getY() < 0){
-//                b.setYSpeed(-1 * b.getYSpeed());
-//            }
         }
         pony.bounce(this);
         //g.fillRect(0,370,200,30);

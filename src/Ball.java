@@ -102,4 +102,9 @@ public class Ball {
         }
     }
 
+    public void randBounce(){
+
+
+    }
+
 }
