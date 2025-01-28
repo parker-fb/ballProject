@@ -84,7 +84,7 @@ public class Ball {
 
 
     public void bounce(Arena a){
-        if (x > 400 - size){
+        if (x > a.getSize().getWidth() - size){
             xSpeed *= -1;
         }
         if (x < 0){

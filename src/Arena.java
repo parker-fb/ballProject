@@ -60,7 +60,7 @@ public class Arena extends JPanel{
         pony.bounce(this);
         //g.fillRect(0,370,200,30);
 
-        //test
+
 
         try {
             Thread.sleep(25);
