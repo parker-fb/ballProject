@@ -37,7 +37,8 @@ public class Arena extends JPanel{
         for (Ball b: balls){
             b.draw(g);
             b.move();
-            b.bounce(this);
+            //b.bounce(this);
+            b.randBounce(this);
         }
         pony.bounce(this);
         //g.fillRect(0,370,200,30);

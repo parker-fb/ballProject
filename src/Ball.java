@@ -94,7 +94,6 @@ public class Ball {
             ySpeed *= -1;
         }
         if (y > a.getSize().getHeight() - size){
-            //System.out.println("bounce");
             ySpeed *= -1;
         }
         if (y < 0){
@@ -102,8 +101,29 @@ public class Ball {
         }
     }
 
-    public void randBounce(){
 
+
+    public void randBounce(Arena a){
+        if (x > a.getSize().getWidth() - size){
+            int rand = (int)(Math.random()*5)+3;
+            xSpeed = rand * -1;
+        }
+        if (x < 0){
+            int rand = (int)(Math.random()*5)+3;
+            xSpeed = rand;
+        }
+        if (y > a.getSize().getWidth() - size){
+            int rand = (int)(Math.random()*5)+3;
+            ySpeed = rand * -1;
+        }
+        if (y > a.getSize().getHeight() - size){
+            int rand = (int)(Math.random()*5)+3;
+            ySpeed = rand * -1;
+        }
+        if (y < 0){
+            int rand = (int)(Math.random()*5)+3;
+            ySpeed = rand;
+        }
 
     }
 
