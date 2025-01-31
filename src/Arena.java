@@ -28,6 +28,7 @@ public class Arena extends JPanel{
 
     @Override
     public void paintComponent(Graphics g){
+        super.paintComponent(g);
         pony.draw(g);
         pony.move();
         //g.fillOval(200,200,30,30);
