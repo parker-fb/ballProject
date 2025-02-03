@@ -29,19 +29,23 @@ public class Arena extends JPanel{
     @Override
     public void paintComponent(Graphics g){
         super.paintComponent(g);
-        pony.draw(g);
-        pony.move();
+        //pony.draw(g);
+        //pony.move();
         //g.fillOval(200,200,30,30);
         //g.setColor(Color.GREEN);
         newBall.draw(g);
         newBall.move();
-        for (Ball b: balls){
-            b.draw(g);
-            b.move();
+        for (int i = 0; i < balls.length; i++){
+            balls[i].draw(g);
+            balls[i].move();
             //b.bounce(this);
-            b.randBounce(this);
+            balls[i].randBounce(this);
+            for (int j = i + 1; j < balls.length; j++) {
+                balls[i].bounceOff(balls[j]);
+            }
+
         }
-        pony.bounce(this);
+        //pony.randBounce(this);
         //g.fillRect(0,370,200,30);
 
 

@@ -104,33 +104,26 @@ public class Ball {
 
 
     public void randBounce(Arena a){
-        if (x > a.getSize().getWidth() - size){
-            int rand = (int)(Math.random()*5)+3;
-            ySpeed  = rand;
+        if (x > a.getWidth() - size){
+            ySpeed = (int)(Math.random()*0)+1;
             xSpeed *= -1;
         }
         if (x < 0){
-            int rand = (int)(Math.random()*5)+3;
-            ySpeed = rand;
-            xSpeed *= -1;
+            ySpeed = (int)(Math.random()*0)+1;
+                xSpeed *= -1;
         }
-        if (y > a.getSize().getWidth() - size){
-            int rand = (int)(Math.random()*5)+3;
-            xSpeed = rand;
-            ySpeed *= -1;
-        }
-        if (y > a.getSize().getHeight() - size){
-            int rand = (int)(Math.random()*5)+3;
-            xSpeed = rand;
-
-            if (ySpeed/-1 != Math.abs(ySpeed)){
+        if (y > a.getWidth() - size){
+            xSpeed = (int)(Math.random()*10)-5;
                 ySpeed *= -1;
-            }
+
+        }
+        if (y > a.getHeight() - size){
+            xSpeed = (int)(Math.random()*10)-5;
+                ySpeed *= -1;
         }
         if (y < 0){
-            int rand = (int)(Math.random()*5)+3;
-            xSpeed = rand;
-            ySpeed *= -1;
+            xSpeed = (int)(Math.random()*0)+1;
+                ySpeed *= -1;
         }
 
     }
@@ -138,7 +131,17 @@ public class Ball {
     public void bounceOff(Ball b){
         int bx = b.x - this.x;
         int by = b.y - this.y;
-        //int dist
+        int dist2 = bx * bx + by * by;
+        int radius = (this.size/2) + (b.size/2);
+        if (dist2 <= radius * radius){
+            int tempXSpeed = this.xSpeed;
+            int tempYSpeed = this.ySpeed;
+            this.xSpeed = b.xSpeed;
+            this.ySpeed = b.ySpeed;
+            b.xSpeed = tempXSpeed;
+            b.ySpeed = tempYSpeed;
+
+        }
 
     }
 
