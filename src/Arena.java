@@ -33,8 +33,23 @@ public class Arena extends JPanel{
             @Override
             public void keyPressed(KeyEvent e) {
                 System.out.println(e.getKeyCode());
+
                 if(e.getKeyCode() == 68){
+                    //right
                     me.setX(me.getX()+4);
+                }
+                else if(e.getKeyCode() == 65){
+                    //left
+                    me.setX(me.getX()-4);
+                }
+
+                else if (e.getKeyCode() == 87){
+                    //up
+                me.setY(me.getY()+4);
+                }
+                else if (e.getKeyCode() == 83){
+                    //down
+                    me.setY(me.getY()-4);
                 }
             }
         });
