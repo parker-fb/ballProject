@@ -16,12 +16,12 @@ public class Ball {
     }
 
     public Ball(){
-        x = 50;
-        y = 50;
-        xSpeed = 5;
-        ySpeed = 5;
+        x = 0;
+        y = 0;
+        xSpeed = 0;
+        ySpeed = 0;
         size = 30;
-        color = Color.GREEN;
+        color = Color.PINK;
     }
 
     public void setX(int x) {
